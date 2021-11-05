@@ -6,7 +6,7 @@
 /*   By: yejeon <yejeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 19:20:23 by yejeon            #+#    #+#             */
-/*   Updated: 2021/11/05 21:32:56 by yejeon           ###   ########.fr       */
+/*   Updated: 2021/11/05 21:53:41 by yejeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	draw_map(t_win *win)
 			if (type != MAP_BG)
 				select_img(win, MAP_BG, &pos);
 			if (type != MAP_PLAYER)
-			select_img(win, type, &pos);
+				select_img(win, type, &pos);
 			pos.x++;
 		}
 		pos.y++;
