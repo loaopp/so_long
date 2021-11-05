@@ -6,7 +6,7 @@
 /*   By: yejeon <yejeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 19:20:23 by yejeon            #+#    #+#             */
-/*   Updated: 2021/11/05 21:05:42 by yejeon           ###   ########.fr       */
+/*   Updated: 2021/11/05 21:32:42 by yejeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	draw_map(t_win *win)
 {
 	t_pos	pos;
 	char	type;
-	
+
 	pos.y = 0;
 	while (pos.y < win->map.h)
 	{

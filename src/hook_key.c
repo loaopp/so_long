@@ -6,13 +6,13 @@
 /*   By: yejeon <yejeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:56:54 by yejeon            #+#    #+#             */
-/*   Updated: 2021/11/05 15:38:24 by yejeon           ###   ########.fr       */
+/*   Updated: 2021/11/05 21:34:51 by yejeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	move_up(t_win *win)
+static void	move_up(t_win *win)
 {
 	t_pos	pos;
 
@@ -21,7 +21,7 @@ void	move_up(t_win *win)
 	move(win, pos);
 }
 
-void	move_down(t_win *win)
+static void	move_down(t_win *win)
 {
 	t_pos	pos;
 
@@ -30,7 +30,7 @@ void	move_down(t_win *win)
 	move(win, pos);
 }
 
-void	move_left(t_win *win)
+static void	move_left(t_win *win)
 {
 	t_pos	pos;
 
@@ -39,7 +39,7 @@ void	move_left(t_win *win)
 	move(win, pos);
 }
 
-void	move_right(t_win *win)
+static void	move_right(t_win *win)
 {
 	t_pos	pos;
 

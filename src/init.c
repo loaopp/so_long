@@ -6,26 +6,26 @@
 /*   By: yejeon <yejeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:25:31 by yejeon            #+#    #+#             */
-/*   Updated: 2021/11/05 21:14:52 by yejeon           ###   ########.fr       */
+/*   Updated: 2021/11/05 21:36:11 by yejeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	init_map(t_win *win)
+static void	init_map(t_win *win)
 {
 	win->map.cnt_item = win->map_info.cnt_item;
 	win->map.tail_size = MAP_TILE_SIZE;
 }
 
-void	load_png(void *mlx, t_img *img, char *path)
+static void	load_png(void *mlx, t_img *img, char *path)
 {
 	img->id = mlx_png_file_to_image(mlx, path, &img->w, &img->h);
 	if (0 == img->id)
 		msg_err_to_exit("fail : load_png error : ", path);
 }
 
-void	init_texture(t_win *win)
+static void	init_texture(t_win *win)
 {
 	load_png(win->mlx, &win->player.img_player, PATH_IMG_PLAYER);
 	load_png(win->mlx, &win->map.img_enemy, PATH_IMG_ENEMY);
@@ -35,7 +35,7 @@ void	init_texture(t_win *win)
 	load_png(win->mlx, &win->map.img_goal, PATH_IMG_GOAL);
 }
 
-void	init_win(t_win *win)
+static void	init_win(t_win *win)
 {
 	win->w = win->map.w * win->map.tail_size;
 	win->h = win->map.h * win->map.tail_size;

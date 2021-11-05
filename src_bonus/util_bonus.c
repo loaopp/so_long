@@ -6,7 +6,7 @@
 /*   By: yejeon <yejeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:07:44 by yejeon            #+#    #+#             */
-/*   Updated: 2021/11/05 21:07:18 by yejeon           ###   ########.fr       */
+/*   Updated: 2021/11/05 21:41:35 by yejeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	msg_err_to_exit(const char *msg, const char *arg)
 	exit(EXIT_FAILURE);
 }
 
-void	destroy_img(t_win *win)
+static void	destroy_img(t_win *win)
 {
 	mlx_destroy_image(win->mlx, win->player.img_player.id);
 	mlx_destroy_image(win->mlx, win->map.img_enemy.id);

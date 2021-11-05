@@ -6,7 +6,7 @@
 /*   By: yejeon <yejeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 18:43:19 by yejeon            #+#    #+#             */
-/*   Updated: 2021/11/05 21:06:16 by yejeon           ###   ########.fr       */
+/*   Updated: 2021/11/05 21:33:41 by yejeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	create_map(t_win *win, int fd)
 {
 	char	*buf;
 	char	*temp;
-	int	re;
+	int		re;
 
 	buf = 0;
 	re = get_next_line(fd, &buf);
@@ -40,7 +40,7 @@ static void	create_map(t_win *win, int fd)
 	free(buf);
 }
 
-static int		is_equal(char *a, char *b)
+static int	is_equal(char *a, char *b)
 {
 	if (a == NULL || b == NULL)
 		return (0);
@@ -60,4 +60,3 @@ void	chk_file(t_win *win, char *path)
 	create_map(win, fd);
 	close(fd);
 }
-

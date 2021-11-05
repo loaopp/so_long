@@ -6,13 +6,13 @@
 /*   By: yejeon <yejeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 14:08:18 by yejeon            #+#    #+#             */
-/*   Updated: 2021/11/05 16:31:57 by yejeon           ###   ########.fr       */
+/*   Updated: 2021/11/05 21:42:07 by yejeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	move_defore(t_win *win, t_pos *pos)
+static int	move_defore(t_win *win, t_pos *pos)
 {
 	if (pos->x < 0 || win->map.w <= pos->x)
 		return (0);
@@ -21,7 +21,7 @@ int	move_defore(t_win *win, t_pos *pos)
 	return (MAP_WALL != get_map_type(win, pos));
 }
 
-void	go(t_win *win, t_pos *pos)
+static void	go(t_win *win, t_pos *pos)
 {
 	win->player.pos.x = pos->x;
 	win->player.pos.y = pos->y;
@@ -33,10 +33,10 @@ static int	chk_quest(t_win *win)
 	return (win->map.cnt_item == win->player.cnt_item);
 }
 
-void	move_after(t_win *win)
+static void	move_after(t_win *win)
 {
 	char	type;
-	
+
 	type = get_map_type(win, &win->player.pos);
 	if (MAP_GOAL == type && chk_quest(win))
 	{

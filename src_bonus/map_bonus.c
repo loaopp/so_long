@@ -6,7 +6,7 @@
 /*   By: yejeon <yejeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 16:10:46 by yejeon            #+#    #+#             */
-/*   Updated: 2021/11/05 21:22:18 by yejeon           ###   ########.fr       */
+/*   Updated: 2021/11/05 21:34:05 by yejeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static int	is_ok_char(char ch)
 static void	load_map(t_win *win)
 {
 	char	ch;
-	int	i;
+	int		i;
 
 	i = 0;
 	while (win->map.buf[i])
